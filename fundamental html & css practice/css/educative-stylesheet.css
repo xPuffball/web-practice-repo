@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    height: 2em;
+  }
+  
+  .left,
+  .right {
+    flex: 1;
+  }
+
+.links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1em;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+}
+
+.links li {
+    text-align: center;
+}
+
+@media screen and (max-width: 420px) {
+    .right {
+        display: none;
+    }
+}

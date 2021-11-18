@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bungo {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr 50px;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: "sidebar content"
+                         "footer footer";
+}
+
+.aside {
+    border: 1px solid red;
+    grid-area: sidebar;
+}
+.main {
+    border: 1px solid green;
+    grid-area: content;
+}
+.footer {
+    border: 1px solid blue;
+    grid-area: footer;
+}
