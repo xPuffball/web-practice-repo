@@ -4,24 +4,114 @@
     box-sizing: border-box;
 }
 
-.bungo {
+body {
     display: grid;
     min-height: 100vh;
-    grid-template-rows: 1fr 50px;
-    grid-template-columns: 50px 1fr;
-    grid-template-areas: "sidebar content"
-                         "footer footer";
+    grid-template-rows: 3em 42em 42em 42em 3em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "navbar navbar navbar"
+                         "jumbotron jumbotron jumbotron"
+                         "testimonials testimonials testimonials"
+                         "prices prices prices"
+                         "footer footer footer";
 }
 
-.aside {
+.navbar {
+    display: grid;
     border: 1px solid red;
-    grid-area: sidebar;
+    grid-template-columns: 3em 1fr 3em;
+    grid-template-areas: "logo main menu";
+    grid-area: navbar;
 }
-.main {
-    border: 1px solid green;
-    grid-area: content;
-}
-.footer {
+
+.logo {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     border: 1px solid blue;
+    grid-area: logo;
+}
+
+.main {
+    border: 1px solid blue;
+    grid-area: main;
+}
+
+.menu {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid blue;
+    grid-area: menu;
+}
+
+/* lets go */
+
+.jumbotron {
+    display: flex;
+    min-height: 100%;
+    border: 1px solid red;
+    grid-area: jumbotron;
+}
+
+.image {
+    border: 1px solid blue;
+    flex: 1 1 0;
+}
+
+.description {
+    border: 1px solid blue;
+    flex: 2 1 0;
+}
+
+/* testimonials */
+
+.testimonials {
+    display: flex;
+    border: 1px solid red;
+    grid-area: testimonials;
+}
+
+.test1 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+}
+.test2 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+}
+.test3 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+}
+
+/* prices */
+
+.prices {
+    display: flex;
+    border: 1px solid red;
+    grid-area: prices;
+}
+
+.price1 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+}
+.price2 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+
+}
+.price3 {
+    border: 1px solid blue;
+    flex: 1 1 0;
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
     grid-area: footer;
 }
